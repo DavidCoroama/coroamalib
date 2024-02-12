@@ -1,3 +1,11 @@
+# Custom
+*.exe
+.idea/
+build/
+debug/
+.vscode/
+cmake-*/
+
 # Prerequisites
 *.d
 
