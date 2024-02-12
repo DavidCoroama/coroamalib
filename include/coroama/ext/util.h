@@ -13,4 +13,10 @@ used outside of the `coroamalib` library. */
 #define _A(x) __attribute__((x))
 #define _T(x) typedef x
 
+#ifdef _COROAMALIB_TYPES_H_
+   #define L long
+   #define S signed
+   #define U unsigned
+#endif//_COROAMALIB_TYPES_H_
+
 #endif //_COROAMALIB_EXT_UTIL_H_
