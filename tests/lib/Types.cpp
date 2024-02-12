@@ -1,8 +1,6 @@
 #include <gtest/gtest.h>
 
-extern "C" {
-    #include <coroama/types.h>
-}
+#include <coroama/types.h>
 
 TEST(TypesTest, TypeIsSpecificSize) {
     ASSERT_EQ(sizeof(i8),  1);

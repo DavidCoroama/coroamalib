@@ -23,6 +23,10 @@ integer instead of a 64-bit integer you can define
 
 #include <coroama/ext/util.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif//__cplusplus
+
 _T(S char)   i8;
 _T(S short)  i16;
 _T(S int)    i32;
@@ -75,6 +79,10 @@ _T(L double) f128;
         #define u128 u128
     #endif//_DISABLE_TYPE_MACROS
 #endif
+
+#ifdef __cplusplus
+}
+#endif//__cplusplus
 
 #include <coroama/ext/cleanup.h>
 
