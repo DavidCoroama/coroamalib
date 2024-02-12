@@ -15,25 +15,6 @@ intended to be used outside of the `coroamalib` library. */
     #undef _T
 #endif//_COROAMALIB_EXT_UTIL_H_
 
-#ifdef _COROAMALIB_EXT_TYPES_H_
-    #undef i8
-    #undef i16
-    #undef i32
-    #undef i64
-
-    #undef u8
-    #undef u16
-    #undef u32
-    #undef u64
-
-    #undef f32
-    #undef f64
-    #undef f128
-
-    #undef size_t
-    #undef ssize_t
-#endif//_COROAMALIB_EXT_TYPES_H_
-
 #ifdef _COROAMALIB_TYPES_H_
     #undef L
     #undef S
