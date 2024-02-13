@@ -21,4 +21,8 @@ intended to be used outside of the `coroamalib` library. */
     #undef U
 #endif//_COROAMALIB_TYPES_H_
 
+#ifdef _DISABLE_TYPE_MACROS
+    #undef _DISABLE_TYPE_MACROS
+#endif//_DISABLE_TYPE_MACROS
+
 #endif //_COROAMALIB_EXT_CLEANUP_H_

@@ -1,4 +1,4 @@
-/* Type Shorthands Declaration File.
+/* Type shorthands declaration file.
    Copyright (C) 2007 Free Software Foundation, Inc.
    Contributed by David Coroama (david.coroama.dev@gmail.com)
 
@@ -22,6 +22,7 @@ integer instead of a 64-bit integer you can define
 #define _COROAMALIB_TYPES_H_
 
 #include <coroama/ext/util.h>
+#include <stdbool.h>
 
 #ifdef __cplusplus
 extern "C" {
