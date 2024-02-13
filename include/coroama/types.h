@@ -11,11 +11,7 @@ Also provides 128-bit integer types, if your machine is 64-bit,
 for the signed integer, unsigned integer, and float. 
 
 If you don't want each type to be defined as a macro you can
-define '_DISABLE_TYPE_MACROS' before you import this file. 
-
-If you want to have 'size_t' and 'ssize_t' to be a 128-bit
-integer instead of a 64-bit integer you can define 
-'_128_SIZE_T' before you import this file. */
+define '_DISABLE_TYPE_MACROS' before you import this file. */
 
 #pragma once
 #ifndef _COROAMALIB_TYPES_H_
@@ -23,6 +19,7 @@ integer instead of a 64-bit integer you can define
 
 #include <coroama/ext/util.h>
 #include <stdbool.h>
+#include <corecrt.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -42,11 +39,6 @@ _T(float)    f32;
 _T(double)   f64;
 _T(L double) f128;
 
-#ifndef _128_SIZE_T
-    _T(u64) size_t;
-    _T(i64) ssize_t;
-#endif//_128_SIZE_T
-
 #ifndef _DISABLE_TYPE_MACROS
     #define i8   i8
     #define i16  i16
@@ -61,19 +53,11 @@ _T(L double) f128;
     #define f32  f32
     #define f64  f64
     #define f128 f128
-
-    #define size_t  size_t
-    #define ssize_t ssize_t
 #endif//_DISABLE_TYPE_MACROS
 
 #ifdef __x86_64__
     _T(S int) i128 _A(mode(TI));
     _T(U int) u128 _A(mode(TI));
-
-    #ifdef _128_SIZE_T
-        _T(u128) size_t;
-        _T(i128) ssize_t;
-    #endif//_128_SIZE_T
 
     #ifndef _DISABLE_TYPE_MACROS
         #define i128 i128
