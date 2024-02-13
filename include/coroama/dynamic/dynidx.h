@@ -39,8 +39,7 @@ _T(struct) dynamic_index {
     size_t* block;
 } dynidx_t;
 
-dynidx_t dynidx_null();
-bool     is_dynidx_null(dynidx_t*);
+#include <coroama/nullapi.h>
 
 dynidx_t dynidx_new();
 dynidx_t dynidx_new_ex(size_t, size_t);

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.26)
 
-project(coroamalib)
+project(CoroamaLib)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -15,9 +15,10 @@ enable_testing()
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/lib/AllTests.cmake)
 
-set(GTEST_MAIN ${CMAKE_CURRENT_SOURCE_DIR}/gtest_main.cpp)
+file(GLOB_RECURSE HEADERS ${COROAMALIB_UNIT_TESTS_ROOT}/../include/*.h)
+file(GLOB_RECURSE SOURCES ${COROAMALIB_UNIT_TESTS_ROOT}/../src/*.c)
 
-add_executable(runUnitTests ${CMAKE_CURRENT_SOURCE_DIR}/gtest_main.cpp ${COROAMALIB_UNIT_TESTS_SOURCE_FILES})
+add_executable(runUnitTests ${CMAKE_CURRENT_SOURCE_DIR}/gtest_main.cpp ${HEADERS} ${SOURCES} ${COROAMALIB_UNIT_TESTS_SOURCE_FILES})
 
 # set_target_properties(runUnitTests)
 target_link_directories(runUnitTests PUBLIC ${CMAKE_SOURCE_DIR}/../cmake-build-debug/)

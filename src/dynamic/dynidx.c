@@ -1,6 +1,5 @@
 #include <coroama/dynamic/dynidx.h>
 #include <coroama/shorthands.h>
-#include <coroama/nullapi.h>
 
 #include <stdlib.h>
 
