@@ -10,6 +10,6 @@ file(GLOB_RECURSE SOURCES src/*.c)
 add_library(coroama STATIC ${HEADERS} ${SOURCES})
 target_include_directories(coroama PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-target_compile_options(coroama PRIVATE -Wall -Wextra)
+target_compile_options(coroama PRIVATE -Wall)
 
 install(TARGETS coroama ARCHIVE DESTINATION lib PUBLIC_HEADER DESTINATION include/coroama)
