@@ -19,7 +19,7 @@ define '_DISABLE_TYPE_MACROS' before you import this file. */
 
 #include <coroama/ext/util.h>
 #include <stdbool.h>
-#include <corecrt.h>
+#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {
