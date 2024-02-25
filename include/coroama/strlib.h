@@ -1,0 +1,5 @@
+#pragma once
+#ifndef COROAMA_LIB_STRLIB_H
+#define COROAMA_LIB_STRLIB_H
+
+#endif//COROAMA_LIB_STRLIB_H

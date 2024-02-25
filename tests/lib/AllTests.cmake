@@ -1,0 +1,5 @@
+set(COROAMA_UNIT_TESTS_ROOT ${CMAKE_SOURCE_DIR}/tests/lib/)
+
+include_directories(${CMAKE_SOURCE_DIR}/include/ ${CMAKE_SOURCE_DIR}/src/)
+
+set(MYLIB_UNIT_TESTS_SOURCE_FILES)

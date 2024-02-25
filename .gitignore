@@ -1,3 +1,13 @@
+# Misc
+.vscode/
+.idea/
+*.exe
+
+# CMake
+cmake-*/
+build/
+debug/
+
 # Prerequisites
 *.d
 
